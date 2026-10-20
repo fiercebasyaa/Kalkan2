@@ -1,0 +1,17 @@
+[
+  {
+    "address": "0xbe0eb53f46cd790cd13851d5eff43d12404d33e8",
+    "label": "Binance 7 (cold wallet)",
+    "chain": "ethereum"
+  },
+  {
+    "address": "0xe92d1a43df510f82c66382592a047d288f85226f",
+    "label": "Bitfinex 19 (cold wallet)",
+    "chain": "ethereum"
+  },
+  {
+    "address": "0x53d284357ec70ce289d6d64134dfac8e511c8a3d",
+    "label": "Kraken 6 (cold wallet)",
+    "chain": "ethereum"
+  }
+]

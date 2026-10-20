@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "check": "Check Address",
+    "watchlist": "Watchlist",
+    "howItWorks": "How It Works",
+    "telegramCta": "Telegram Alerts"
+  },
+  "hero": {
+    "liveBadge": "LIVE · Monitoring {chains} blockchain networks",
+    "titleLine1": "Check ",
+    "titleHighlight": "who you're trusting",
+    "titleLine2": "with your crypto savings",
+    "subtitle": "A free public tool for address checks and early exit-scam warnings — before it's too late.",
+    "searchPlaceholder": "Paste a crypto address: 0x...",
+    "searchButton": "Check",
+    "searchButtonLoading": "Checking…",
+    "supportedLabel": "Supporting {n} blockchain networks",
+    "badgeMonitoring": "Real-time monitoring",
+    "badgeReserves": "Reserve analysis",
+    "badgeRisk": "Risk scoring",
+    "badgeFlow": "Fund flow"
+  },
+  "stats": {
+    "checksToday": "Checks today",
+    "platforms": "Addresses in Watchlist",
+    "activeAlerts": "Active alerts",
+    "languages": "Interface languages"
+  },
+  "about": {
+    "eyebrow": "Why this exists",
+    "title": "About the project",
+    "p1": "Turkey is one of the world's leading countries for retail crypto adoption — people have used crypto for years to protect savings from lira inflation.",
+    "p2": "In 2021, the collapse of the Thodex exchange — its founder fled with roughly $2 billion — left around 400,000 users without their funds. There was no early warning: nobody saw the reserves draining before it was too late.",
+    "p3": "Existing AML/forensics tools (Chainalysis, TRM, Crystal) are sold to exchanges for their own compliance — an ordinary depositor can't access them. Kalkan is a free public tool: paste an address → get a clear report, no signup required.",
+    "statThodexLoss": "$2B",
+    "statThodexLossLabel": "lost in the Thodex collapse, 2021",
+    "statThodexUsers": "~400,000",
+    "statThodexUsersLabel": "users affected"
+  },
+  "watchlistSection": {
+    "title": "Reserve wallet Watchlist",
+    "subtitle": "Real-time monitoring of reserves and outflows",
+    "why": "A demo of the early-detection mechanics, using major exchange reserve wallets (Binance, Bitfinex, Kraken) as examples. The same logic applies to any platform, including local Turkish exchanges.",
+    "refresh": "Refresh now",
+    "statusStable": "Stable",
+    "statusWatch": "Watching",
+    "statusRisk": "High risk",
+    "updated": "Updated {time}",
+    "empty": "Watchlist is empty — add addresses to backend/app/data/watchlist.json"
+  },
+  "report": {
+    "riskScore": "Risk Score",
+    "riskGreen": "Low risk",
+    "riskYellow": "Medium risk",
+    "riskRed": "High risk",
+    "riskUnknown": "Not enough data",
+    "portfolioTitle": "Portfolio",
+    "portfolioSource": "Source: {source}",
+    "portfolioEmpty": "n/a",
+    "flagsTitle": "Scam database flags",
+    "flagsEmpty": "No matches found",
+    "txTitle": "Recent transactions",
+    "txHash": "Hash",
+    "txDirection": "Direction",
+    "txCounterparty": "Counterparty",
+    "txValue": "Value",
+    "txAsset": "Asset",
+    "dirIn": "in",
+    "dirOut": "out",
+    "dirUnknown": "—",
+    "graphTitle": "Fund flow graph",
+    "exportJson": "Export JSON",
+    "exportCsv": "Export CSV",
+    "invalidAddress": "Expected an EVM address: 0x + 40 hex characters",
+    "counterpartiesChecked": "Counterparties checked: {n}"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Everything you need to make an informed decision",
+    "checkTitle": "Address check",
+    "checkDesc": "Portfolio, activity history, links and risks.",
+    "reservesTitle": "Reserve monitoring",
+    "reservesDesc": "Inflow and outflow analysis for platform reserves.",
+    "graphTitle": "Fund flow graph",
+    "graphDesc": "Visual links between addresses and clusters.",
+    "alertsTitle": "Public alerts",
+    "alertsDesc": "Get Telegram notifications about important events."
+  },
+  "platformsSection": {
+    "title": "Supported networks"
+  },
+  "telegramBanner": {
+    "title": "Get important alerts on Telegram",
+    "subtitle": "Early warnings about risks, large transfers, and reserve changes.",
+    "cta": "Connect Telegram"
+  },
+  "footer": {
+    "tagline": "An independent crypto-investor protection project for Web3.",
+    "product": "Product",
+    "community": "Community",
+    "author": "Author",
+    "howItWorks": "How it works",
+    "telegram": "Telegram",
+    "copyright": "© {year} Kalkan. All rights reserved."
+  },
+  "reasons": {
+    "risk_direct_flag": "Address directly flagged in {source}: {label}",
+    "risk_direct_flags_multi": "Address directly flagged by {count} sources ({sources}): {label}",
+    "risk_counterparty_flags": "Found {count} flagged addresses among recent counterparties (across {flag_count} flags)",
+    "risk_clean": "No matches found in scam databases",
+    "warn_quicknode_fallback": "Zerion unavailable — showing only the native balance via QuickNode ({balance} native units), no USD value or tokens",
+    "warn_no_portfolio_source": "Neither Zerion nor QuickNode is configured/available — portfolio not retrieved",
+    "warn_zerion_not_configured": "Transaction history unavailable (a Zerion key is required)",
+    "warn_zerion_no_tx": "Zerion returned no transactions for this address — either there's genuinely no activity, or Zerion considers it untrackable (common for very high-throughput exchange wallets)",
+    "alert_reserve_drop": "Reserves dropped {pct}% over the last poll interval ({prev} → {curr} USD)"
+  }
+}

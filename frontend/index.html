@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kalkan</title>
+<link rel="stylesheet" href="style.css?v=3" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/>
+        <path d="m9 12 2 2 4-4" />
+      </svg>
+    </span>
+    <span class="brand-name">Kalkan</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#top" data-i18n="nav.check">Проверить адрес</a>
+    <a href="#watchlist" data-i18n="nav.watchlist">Watchlist</a>
+    <a href="#features" data-i18n="nav.howItWorks">Как это работает</a>
+  </nav>
+  <div class="topbar-actions">
+    <div class="lang-switch" id="lang-switch">
+      <button class="lang-current" id="lang-current" type="button">RU</button>
+      <div class="lang-menu" id="lang-menu">
+        <button data-lang="ru">RU · Русский</button>
+        <button data-lang="en">EN · English</button>
+        <button data-lang="tr">TR · Türkçe</button>
+      </div>
+    </div>
+    <a class="telegram-cta" id="telegram-cta" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M21.9 4.3 18.8 20c-.2 1-1.2 1.3-2 .8l-4.8-3.5-2.4 2.3c-.3.3-.6.4-1 .4l.3-4.9L18 8.3c.4-.4-.1-.6-.6-.3L7.1 14 2.4 12.5c-1-.3-1-1 .2-1.5L20.5 3.6c.8-.3 1.6.2 1.4 1.7Z"/></svg>
+      <span data-i18n="nav.telegramCta">Telegram-алерты</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="live-badge">
+        <span class="live-dot"></span>
+        <span id="live-badge-text" data-i18n="hero.liveBadge" data-i18n-params="chains">LIVE · Мониторинг 7 блокчейн-сетей</span>
+      </span>
+      <h1>
+        <span data-i18n="hero.titleLine1">Проверь, </span><span class="highlight" data-i18n="hero.titleHighlight">кому доверяешь</span><br/>
+        <span data-i18n="hero.titleLine2">свои крипто-сбережения</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Бесплатный публичный инструмент проверки адресов и раннего предупреждения о риске exit scam — до того, как станет поздно.</p>
+
+      <form id="address-form" class="hero-search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="address-input" type="text" data-i18n-placeholder="hero.searchPlaceholder" placeholder="Вставь крипто-адрес: 0x..." autocomplete="off" spellcheck="false" />
+        <button type="submit"><span data-i18n="hero.searchButton">Проверить</span> <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="form-error" class="error hidden"></p>
+
+      <p class="supported-label" id="supported-label" data-i18n="hero.supportedLabel" data-i18n-params="n">Поддерживаем 7 блокчейн-сетей</p>
+      <div class="chain-pills">
+        <span class="chain-pill">Ethereum</span>
+        <span class="chain-pill">Arbitrum</span>
+        <span class="chain-pill">Base</span>
+        <span class="chain-pill">Polygon</span>
+        <span class="chain-pill">Optimism</span>
+        <span class="chain-pill">BNB Chain</span>
+        <span class="chain-pill">Avalanche</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="shield-orb">
+        <svg viewBox="0 0 24 24" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      </div>
+      <div class="orbit-badge b1" data-i18n="hero.badgeMonitoring">Мониторинг в реальном времени</div>
+      <div class="orbit-badge b2" data-i18n="hero.badgeReserves">Анализ резервов</div>
+      <div class="orbit-badge b3" data-i18n="hero.badgeRisk">Риск-скоринг</div>
+      <div class="orbit-badge b4" data-i18n="hero.badgeFlow">Движение средств</div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <div><div class="stat-value" id="stat-checks">—</div><div class="stat-label" data-i18n="stats.checksToday">Проверок сегодня</div></div>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>
+      <div><div class="stat-value" id="stat-platforms">—</div><div class="stat-label" data-i18n="stats.platforms">Адресов в Watchlist</div></div>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+      <div><div class="stat-value" id="stat-alerts">—</div><div class="stat-label" data-i18n="stats.activeAlerts">Активных предупреждений</div></div>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg>
+      <div><div class="stat-value" id="stat-langs">3</div><div class="stat-label" data-i18n="stats.languages">Языка интерфейса</div></div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-text">
+      <span class="section-eyebrow" data-i18n="about.eyebrow">Зачем это нужно</span>
+      <h2 data-i18n="about.title">О проекте</h2>
+      <p data-i18n="about.p1">Турция — один из мировых лидеров по розничной крипто-адопции...</p>
+      <p data-i18n="about.p2">В 2021 году крах биржи Thodex...</p>
+      <p data-i18n="about.p3">Существующие AML/форензик-инструменты...</p>
+    </div>
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="about-stat-value" data-i18n="about.statThodexLoss">$2 млрд</div>
+        <div class="about-stat-label" data-i18n="about.statThodexLossLabel">потеряно при крахе Thodex, 2021</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-value" data-i18n="about.statThodexUsers">~400 000</div>
+        <div class="about-stat-label" data-i18n="about.statThodexUsersLabel">пользователей пострадало</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="watchlist" class="watchlist-section">
+    <div class="section-header">
+      <div>
+        <h2 data-i18n="watchlistSection.title">Watchlist резервных кошельков</h2>
+        <p data-i18n="watchlistSection.subtitle">Мониторинг резервов и оттоков в реальном времени</p>
+        <p class="watchlist-why" data-i18n="watchlistSection.why">Демо механики раннего обнаружения...</p>
+      </div>
+      <button id="watchlist-refresh" class="ghost-btn" data-i18n="watchlistSection.refresh">Обновить сейчас</button>
+    </div>
+    <div id="watchlist-cards" class="watchlist-grid"></div>
+  </section>
+
+  <section id="report" class="report-section hidden">
+    <div class="report-grid">
+      <div class="card risk-card">
+        <div class="risk-light">
+          <div class="risk-dot" id="risk-dot"></div>
+          <div>
+            <div class="risk-score-label" data-i18n="report.riskScore">Risk Score</div>
+            <div class="risk-score" id="risk-score">—</div>
+            <div class="risk-label" id="risk-level-label">—</div>
+          </div>
+        </div>
+        <ul id="risk-reasons" class="reasons-list"></ul>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="report.portfolioTitle">Портфель</h3>
+        <div id="portfolio-total" class="portfolio-total">—</div>
+        <div id="portfolio-source" class="muted"></div>
+        <table id="portfolio-table" class="token-table"><tbody></tbody></table>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="report.flagsTitle">Флаги скам-баз</h3>
+        <ul id="flags-list" class="flags-list"></ul>
+      </div>
+
+      <div class="card wide">
+        <h3 data-i18n="report.txTitle">Последние транзакции</h3>
+        <table id="tx-table" class="tx-table">
+          <thead>
+            <tr>
+              <th data-i18n="report.txHash">Hash</th>
+              <th data-i18n="report.txDirection">Направление</th>
+              <th data-i18n="report.txCounterparty">Контрагент</th>
+              <th data-i18n="report.txValue">Сумма</th>
+              <th data-i18n="report.txAsset">Актив</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="card wide">
+        <h3 data-i18n="report.graphTitle">Граф движения средств</h3>
+        <div id="flow-graph"></div>
+      </div>
+    </div>
+
+    <div id="warnings" class="warnings hidden"></div>
+
+    <div class="export-row">
+      <button id="export-json"><span data-i18n="report.exportJson">Экспорт JSON</span></button>
+      <button id="export-csv"><span data-i18n="report.exportCsv">Экспорт CSV</span></button>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <div class="section-header centered">
+      <h2 data-i18n="features.title">Возможности</h2>
+      <p data-i18n="features.subtitle">Всё, что нужно, чтобы принять взвешенное решение</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4 data-i18n="features.checkTitle">Проверка адреса</h4>
+        <p data-i18n="features.checkDesc">Портфель, история активности, связи и риски.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 15 4-6 3 3 5-8"/></svg></div>
+        <h4 data-i18n="features.reservesTitle">Мониторинг резервов</h4>
+        <p data-i18n="features.reservesDesc">Анализ притока и оттока средств платформ.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7.5 7.5 11 16M16.5 7.5 13 16"/></svg></div>
+        <h4 data-i18n="features.graphTitle">Граф движения средств</h4>
+        <p data-i18n="features.graphDesc">Наглядные связи между адресами и кластерами.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+        <h4 data-i18n="features.alertsTitle">Публичные алерты</h4>
+        <p data-i18n="features.alertsDesc">Получай уведомления в Telegram о важных событиях.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="platforms-section">
+    <h2 data-i18n="platformsSection.title">Поддерживаемые сети</h2>
+    <div class="chain-pills large" id="platforms-pills">
+      <span class="chain-pill">Ethereum</span>
+      <span class="chain-pill">Arbitrum</span>
+      <span class="chain-pill">Base</span>
+      <span class="chain-pill">Polygon</span>
+      <span class="chain-pill">Optimism</span>
+      <span class="chain-pill">BNB Chain</span>
+      <span class="chain-pill">Avalanche</span>
+    </div>
+  </section>
+
+  <section class="telegram-banner">
+    <div class="telegram-banner-icon">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M21.9 4.3 18.8 20c-.2 1-1.2 1.3-2 .8l-4.8-3.5-2.4 2.3c-.3.3-.6.4-1 .4l.3-4.9L18 8.3c.4-.4-.1-.6-.6-.3L7.1 14 2.4 12.5c-1-.3-1-1 .2-1.5L20.5 3.6c.8-.3 1.6.2 1.4 1.7Z"/></svg>
+    </div>
+    <div class="telegram-banner-text">
+      <h3 data-i18n="telegramBanner.title">Получай важные алерты в Telegram</h3>
+      <p data-i18n="telegramBanner.subtitle">Ранние предупреждения о рисках, крупных переводах и изменениях резервов.</p>
+    </div>
+    <a class="telegram-banner-cta" id="telegram-banner-cta" href="#" target="_blank" rel="noopener">
+      <span data-i18n="telegramBanner.cta">Подключить Telegram</span> →
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand">
+        <span class="brand-mark small"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/></svg></span>
+        <span class="brand-name">Kalkan</span>
+      </div>
+      <p data-i18n="footer.tagline">Независимый проект защиты крипто-инвесторов в Web3-пространстве.</p>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.product">Продукт</h5>
+      <a href="#features" data-i18n="footer.howItWorks">Как это работает</a>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.community">Сообщество</h5>
+      <a href="#" id="footer-telegram" target="_blank" rel="noopener" data-i18n="footer.telegram">Telegram</a>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.author">Автор</h5>
+      <a href="https://github.com/0xBreak" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/0xBreak" target="_blank" rel="noopener">X (Twitter)</a>
+      <a href="https://t.me/0xBreak" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span id="footer-copyright" data-i18n="footer.copyright" data-i18n-params="year">© 2026 Kalkan. Все права защищены.</span>
+  </div>
+</footer>
+
+<script src="app.js?v=4"></script>
+</body>
+</html>

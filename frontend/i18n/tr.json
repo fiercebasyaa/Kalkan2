@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "check": "Adres Kontrol Et",
+    "watchlist": "İzleme Listesi",
+    "howItWorks": "Nasıl Çalışır",
+    "telegramCta": "Telegram Uyarıları"
+  },
+  "hero": {
+    "liveBadge": "CANLI · {chains} blok zinciri ağı izleniyor",
+    "titleLine1": "Kripto birikimlerinde",
+    "titleHighlight": "kime güvendiğini",
+    "titleLine2": "kontrol et",
+    "subtitle": "Adres kontrolü ve erken exit scam uyarısı için ücretsiz, herkese açık bir araç — iş işten geçmeden önce.",
+    "searchPlaceholder": "Bir kripto adresi yapıştır: 0x...",
+    "searchButton": "Kontrol Et",
+    "searchButtonLoading": "Kontrol ediliyor…",
+    "supportedLabel": "{n} blok zinciri ağını destekliyoruz",
+    "badgeMonitoring": "Gerçek zamanlı izleme",
+    "badgeReserves": "Rezerv analizi",
+    "badgeRisk": "Risk puanlama",
+    "badgeFlow": "Fon akışı"
+  },
+  "stats": {
+    "checksToday": "Bugünkü kontroller",
+    "platforms": "İzleme listesindeki adresler",
+    "activeAlerts": "Aktif uyarılar",
+    "languages": "Arayüz dili"
+  },
+  "about": {
+    "eyebrow": "Bu neden var",
+    "title": "Proje hakkında",
+    "p1": "Türkiye, perakende kripto benimsemesinde dünyanın önde gelen ülkelerinden biri — insanlar yıllardır birikimlerini lira enflasyonundan korumak için kripto kullanıyor.",
+    "p2": "2021'de Thodex borsasının çöküşü — kurucusu yaklaşık 2 milyar dolarla kayıplara karıştı — yaklaşık 400.000 kullanıcıyı parasız bıraktı. Erken bir uyarı yoktu: iş işten geçmeden önce kimse rezervlerin eridiğini görmedi.",
+    "p3": "Mevcut AML/adli analiz araçları (Chainalysis, TRM, Crystal) borsalara kendi uyum süreçleri için satılıyor — sıradan bir yatırımcı bunlara erişemez. Kalkan ücretsiz, herkese açık bir araç: adresi yapıştır → net bir rapor al, kayıt gerekmez.",
+    "statThodexLoss": "2 milyar $",
+    "statThodexLossLabel": "Thodex çöküşünde kaybedildi, 2021",
+    "statThodexUsers": "~400.000",
+    "statThodexUsersLabel": "kullanıcı etkilendi"
+  },
+  "watchlistSection": {
+    "title": "Rezerv cüzdanı izleme listesi",
+    "subtitle": "Rezervlerin ve çıkışların gerçek zamanlı izlenmesi",
+    "why": "Erken tespit mekanizmasının demosu — örnek olarak büyük borsaların rezerv cüzdanları (Binance, Bitfinex, Kraken) kullanılıyor. Aynı mantık, yerel Türk borsaları dahil her platforma uygulanabilir.",
+    "refresh": "Şimdi yenile",
+    "statusStable": "Stabil",
+    "statusWatch": "İzleniyor",
+    "statusRisk": "Yüksek risk",
+    "updated": "Güncellendi: {time}",
+    "empty": "İzleme listesi boş — backend/app/data/watchlist.json dosyasına adres ekleyin"
+  },
+  "report": {
+    "riskScore": "Risk Puanı",
+    "riskGreen": "Düşük risk",
+    "riskYellow": "Orta risk",
+    "riskRed": "Yüksek risk",
+    "riskUnknown": "Yetersiz veri",
+    "portfolioTitle": "Portföy",
+    "portfolioSource": "Kaynak: {source}",
+    "portfolioEmpty": "veri yok",
+    "flagsTitle": "Dolandırıcılık veritabanı işaretleri",
+    "flagsEmpty": "Eşleşme bulunamadı",
+    "txTitle": "Son işlemler",
+    "txHash": "Hash",
+    "txDirection": "Yön",
+    "txCounterparty": "Karşı taraf",
+    "txValue": "Tutar",
+    "txAsset": "Varlık",
+    "dirIn": "gelen",
+    "dirOut": "giden",
+    "dirUnknown": "—",
+    "graphTitle": "Fon akış grafiği",
+    "exportJson": "JSON İndir",
+    "exportCsv": "CSV İndir",
+    "invalidAddress": "0x ile başlayan 40 hex karakterlik bir EVM adresi bekleniyor",
+    "counterpartiesChecked": "Kontrol edilen karşı taraf sayısı: {n}"
+  },
+  "features": {
+    "title": "Özellikler",
+    "subtitle": "Bilinçli bir karar vermek için ihtiyacın olan her şey",
+    "checkTitle": "Adres kontrolü",
+    "checkDesc": "Portföy, işlem geçmişi, bağlantılar ve riskler.",
+    "reservesTitle": "Rezerv izleme",
+    "reservesDesc": "Platform rezervlerinde giriş ve çıkış analizi.",
+    "graphTitle": "Fon akış grafiği",
+    "graphDesc": "Adresler ve kümeler arasındaki görsel bağlantılar.",
+    "alertsTitle": "Herkese açık uyarılar",
+    "alertsDesc": "Önemli olaylarla ilgili Telegram bildirimleri al."
+  },
+  "platformsSection": {
+    "title": "Desteklenen ağlar"
+  },
+  "telegramBanner": {
+    "title": "Önemli uyarıları Telegram'da al",
+    "subtitle": "Riskler, büyük transferler ve rezerv değişiklikleri hakkında erken uyarılar.",
+    "cta": "Telegram'ı Bağla"
+  },
+  "footer": {
+    "tagline": "Web3 alanında bağımsız bir kripto yatırımcı koruma projesi.",
+    "product": "Ürün",
+    "community": "Topluluk",
+    "author": "Geliştirici",
+    "howItWorks": "Nasıl çalışır",
+    "telegram": "Telegram",
+    "copyright": "© {year} Kalkan. Tüm hakları saklıdır."
+  },
+  "reasons": {
+    "risk_direct_flag": "Adres {source} tarafından doğrudan işaretlendi: {label}",
+    "risk_direct_flags_multi": "Adres {count} kaynak tarafından işaretlendi ({sources}): {label}",
+    "risk_counterparty_flags": "Son karşı taraflar arasında {count} işaretli adres bulundu ({flag_count} işaret üzerinden)",
+    "risk_clean": "Dolandırıcılık veritabanlarında eşleşme bulunamadı",
+    "warn_quicknode_fallback": "Zerion kullanılamıyor — QuickNode üzerinden yalnızca native bakiye gösteriliyor ({balance} native birim), USD değeri veya token yok",
+    "warn_no_portfolio_source": "Ne Zerion ne de QuickNode yapılandırılmamış/erişilemez — portföy alınamadı",
+    "warn_zerion_not_configured": "İşlem geçmişi kullanılamıyor (Zerion anahtarı gerekli)",
+    "warn_zerion_no_tx": "Zerion bu adres için işlem döndürmedi — ya gerçekten hiç aktivite yok ya da Zerion bu adresi izlenemez sayıyor (çok yüksek hacimli borsa cüzdanlarında yaygın)",
+    "alert_reserve_drop": "Son kontrol aralığında rezervler %{pct} düştü ({prev} → {curr} USD)"
+  }
+}

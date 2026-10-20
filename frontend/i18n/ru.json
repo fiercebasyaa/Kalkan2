@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "check": "Проверить адрес",
+    "watchlist": "Watchlist",
+    "howItWorks": "Как это работает",
+    "telegramCta": "Telegram-алерты"
+  },
+  "hero": {
+    "liveBadge": "LIVE · Мониторинг {chains} блокчейн-сетей",
+    "titleLine1": "Проверь, ",
+    "titleHighlight": "кому доверяешь",
+    "titleLine2": "свои крипто-сбережения",
+    "subtitle": "Бесплатный публичный инструмент проверки адресов и раннего предупреждения о риске exit scam — до того, как станет поздно.",
+    "searchPlaceholder": "Вставь крипто-адрес: 0x...",
+    "searchButton": "Проверить",
+    "searchButtonLoading": "Проверяю…",
+    "supportedLabel": "Поддерживаем {n} блокчейн-сетей",
+    "badgeMonitoring": "Мониторинг в реальном времени",
+    "badgeReserves": "Анализ резервов",
+    "badgeRisk": "Риск-скоринг",
+    "badgeFlow": "Движение средств"
+  },
+  "stats": {
+    "checksToday": "Проверок сегодня",
+    "platforms": "Адресов в Watchlist",
+    "activeAlerts": "Активных предупреждений",
+    "languages": "Языка интерфейса"
+  },
+  "about": {
+    "eyebrow": "Зачем это нужно",
+    "title": "О проекте",
+    "p1": "Турция — один из мировых лидеров по розничной крипто-адопции: люди годами используют криптовалюту, чтобы защитить сбережения от инфляции лиры.",
+    "p2": "В 2021 году крах биржи Thodex — основатель скрылся с примерно $2 млрд — оставил около 400 000 пользователей без средств. Предупреждающих сигналов для вкладчиков не было: никто не видел отток резервов до того, как стало поздно.",
+    "p3": "Существующие AML/форензик-инструменты (Chainalysis, TRM, Crystal) продаются биржам для их собственного комплаенса — обычному вкладчику они недоступны. Kalkan — бесплатный публичный инструмент: вставь адрес → получи понятный отчёт, без регистрации.",
+    "statThodexLoss": "$2 млрд",
+    "statThodexLossLabel": "потеряно при крахе Thodex, 2021",
+    "statThodexUsers": "~400 000",
+    "statThodexUsersLabel": "пользователей пострадало"
+  },
+  "watchlistSection": {
+    "title": "Watchlist резервных кошельков",
+    "subtitle": "Мониторинг резервов и оттоков в реальном времени",
+    "why": "Демо механики раннего обнаружения — на примере резервных кошельков крупных бирж (Binance, Bitfinex, Kraken). Та же логика применима к любой платформе, включая локальные турецкие биржи.",
+    "refresh": "Обновить сейчас",
+    "statusStable": "Стабильно",
+    "statusWatch": "Наблюдение",
+    "statusRisk": "Высокий риск",
+    "updated": "Обновлено {time}",
+    "empty": "Watchlist пуст — добавьте адреса в backend/app/data/watchlist.json"
+  },
+  "report": {
+    "riskScore": "Risk Score",
+    "riskGreen": "Низкий риск",
+    "riskYellow": "Средний риск",
+    "riskRed": "Высокий риск",
+    "riskUnknown": "Недостаточно данных",
+    "portfolioTitle": "Портфель",
+    "portfolioSource": "Источник: {source}",
+    "portfolioEmpty": "н/д",
+    "flagsTitle": "Флаги скам-баз",
+    "flagsEmpty": "Совпадений не найдено",
+    "txTitle": "Последние транзакции",
+    "txHash": "Hash",
+    "txDirection": "Направление",
+    "txCounterparty": "Контрагент",
+    "txValue": "Сумма",
+    "txAsset": "Актив",
+    "dirIn": "входящая",
+    "dirOut": "исходящая",
+    "dirUnknown": "—",
+    "graphTitle": "Граф движения средств",
+    "exportJson": "Экспорт JSON",
+    "exportCsv": "Экспорт CSV",
+    "invalidAddress": "Ожидается EVM-адрес формата 0x + 40 hex-символов",
+    "counterpartiesChecked": "Проверено контрагентов: {n}"
+  },
+  "features": {
+    "title": "Возможности",
+    "subtitle": "Всё, что нужно, чтобы принять взвешенное решение",
+    "checkTitle": "Проверка адреса",
+    "checkDesc": "Портфель, история активности, связи и риски.",
+    "reservesTitle": "Мониторинг резервов",
+    "reservesDesc": "Анализ притока и оттока средств платформ.",
+    "graphTitle": "Граф движения средств",
+    "graphDesc": "Наглядные связи между адресами и кластерами.",
+    "alertsTitle": "Публичные алерты",
+    "alertsDesc": "Получай уведомления в Telegram о важных событиях."
+  },
+  "platformsSection": {
+    "title": "Поддерживаемые сети"
+  },
+  "telegramBanner": {
+    "title": "Получай важные алерты в Telegram",
+    "subtitle": "Ранние предупреждения о рисках, крупных переводах и изменениях резервов.",
+    "cta": "Подключить Telegram"
+  },
+  "footer": {
+    "tagline": "Независимый проект защиты крипто-инвесторов в Web3-пространстве.",
+    "product": "Продукт",
+    "community": "Сообщество",
+    "author": "Автор",
+    "howItWorks": "Как это работает",
+    "telegram": "Telegram",
+    "copyright": "© {year} Kalkan. Все права защищены."
+  },
+  "reasons": {
+    "risk_direct_flag": "Адрес напрямую отмечен в {source}: {label}",
+    "risk_direct_flags_multi": "Адрес напрямую отмечен {count} источниками ({sources}): {label}",
+    "risk_counterparty_flags": "Среди недавних контрагентов найдено {count} отмеченных адресов (сверка по {flag_count} флагам)",
+    "risk_clean": "Совпадений со скам-базами не найдено",
+    "warn_quicknode_fallback": "Zerion недоступен — показан только нативный баланс через QuickNode ({balance} native units), без USD-оценки и токенов",
+    "warn_no_portfolio_source": "Ни Zerion, ни QuickNode не настроены/недоступны — портфель не получен",
+    "warn_zerion_not_configured": "История транзакций недоступна (нужен ключ Zerion)",
+    "warn_zerion_no_tx": "Zerion не вернул транзакций по этому адресу — либо на нём вообще нет активности, либо Zerion считает его untrackable (бывает на сверхвысоконагруженных биржевых кошельках)",
+    "alert_reserve_drop": "Резервы упали на {pct}% за последний poll-интервал ({prev} → {curr} USD)"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "address": "0x321Df194646029e7A6193Ea05573d4B9c398bfD9",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  },
+  {
+    "address": "0xD1794196f0fc99c7f27970e661597d77d9a85869",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  },
+  {
+    "address": "0xB47D44C49Ad2096B080809b439786De1D35DA965",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  },
+  {
+    "address": "0x6d4095b62ef79CfeB6CaA28ac793659EE2aE94cB",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  },
+  {
+    "address": "0x43e62b876fb511e7fc6654aedd4b9c292d5ccf60",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  },
+  {
+    "address": "0x16cdda08407da70c24dEa96CF95d8168DBc1704d",
+    "label": "Ostium exploiter — $18-24M oracle-manipulation hack, July 2026 (Arbitrum)",
+    "severity": "critical",
+    "source_url": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+  }
+]
